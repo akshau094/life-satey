@@ -244,7 +244,7 @@ app.get("/api/crime-heatmap", async (req, res) => {
     const year = parseInt(req.query.year || "2024", 10);
 
     if (year === 2025) {
-      const dataPath = path.join(process.cwd(), "server", "data", "crime_data_2025.json");
+      const dataPath = path.join(__dirname, "data", "crime_data_2025.json");
       if (fs.existsSync(dataPath)) {
         const rawData = fs.readFileSync(dataPath, "utf-8");
         const jsonData = JSON.parse(rawData);
