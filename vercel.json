@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "comment": "Triggering fresh build with root-level static files",
   "rewrites": [
     {
       "source": "/api/(.*)",
